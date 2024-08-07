@@ -1,0 +1,13 @@
+#POD for checking connectivity [Debugging Pod]
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: debug-pod
+spec:
+  containers:
+  - name: debug-container
+    image: nicolaka/netshoot
+    command: ["/bin/bash", "-c", "--"]
+    args: ["while true; do sleep 30; done;"]
+  restartPolicy: Never
