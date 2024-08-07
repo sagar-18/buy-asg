@@ -37,17 +37,16 @@ minikube addons enable metrics-server
 
 ● Design Choices: Describe why you chose the specific configurations and setups, including any alternatives(if any) you considered and why you did not choose them. 
 
-Generally I preferred custom HELM charts for deploying OWN Application or MongoDB but as per the requirements I have used custom manifest files.
+Generally, I preferred custom HELM charts for deploying OWN Application or MongoDB, but as per the requirements, I have used custom manifest files.
 
 
 ● Cookie point: Testing Scenarios: Detail how you tested autoscaling and database interactions, including simulating high traffic. Provide results and any issues encountered during testing.
 
-I write one simple locust testing script and simulate some users on the Application URL so it increases the cpu usages of the pods that triggers the HPA > 10% (testing) and thus it increases the pods to 5 (max limit).
+I write one simple locust testing script and simulate some users on the Application URL so it increases the CPU usage of the pods that trigger the HPA > 10% (testing), and thus, it increases the pods to 5 (max limit).
 
+Also I have installed metrics-server in the cluster
 
 Images are attached below.
-
-
 
 
 ![alt text](autoscale1.png)
