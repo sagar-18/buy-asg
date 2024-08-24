@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: flask-tls
+  namespace: sagarapp
+spec:
+  secretName: flask-tls
+  issuerRef:
+    name: letsencrypt-staging
+    kind: ClusterIssuer
+  commonName: flask.sagar.com
+  dnsNames:
+    - flask.sagar.com

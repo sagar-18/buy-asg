@@ -2,6 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: flask-ingress
+  namespace: sagarapp
 spec:
   ingressClassName: nginx
   rules:
@@ -14,4 +15,8 @@ spec:
               service:
                 name: flask-service
                 port:
-                  number: 80                  
+                  number: 80
+  tls:
+    - hosts:
+      - flask.sagar.com
+      secretName: flask-tls
