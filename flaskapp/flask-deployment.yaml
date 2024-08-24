@@ -20,7 +20,7 @@ spec:
         - containerPort: 5001
         env:
         - name: MONGODB_URI
-          value: "mongodb://mongodb-service.sagar:27017/"
+          value: "mongodb://mongodb-service.mongodb:27017/"
         resources:
           requests:
             cpu: "200m"

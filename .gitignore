@@ -1,2 +1,4 @@
 argocd-ingress.yaml
 sagar.sh
+letsencrypt-clusterissuer.yaml
+argocd-certificate.yaml
